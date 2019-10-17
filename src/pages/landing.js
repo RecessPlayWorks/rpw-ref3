@@ -62,35 +62,6 @@ const StyledLanding = styled.div`
    }
 
 
-   /* queries for iPhone 6/7/8 */
-   @media only screen 
-   and (min-device-width: 375px) 
-   and (max-device-width: 667px) 
-   and (-webkit-min-device-pixel-ratio: 2) { 
-    .cell {
-        width: 300px;
-        height: 250px;
-        flex-grow: 1;
-       }
-       section.landing-content-container {
-            position: absolute;
-            top: 0;
-            left: 25vw;
-            margin-right: -50vw;
-            width: 100vw;
-      }
-          & h2 {
-            text-align: center;
-            font-size: 1.2rem;
-        }
-        & h3 {
-            text-align: left;
-            line-height: 2;
-            font-size: 1rem;
-
-        }
-     
- }
 `;
 
 const Landing = () => (

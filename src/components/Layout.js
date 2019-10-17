@@ -5,12 +5,13 @@ import Helmet from 'react-helmet';/*Here is where we set our SEO */
 import Header from './Header';
 import Footer from './Footer';
 
+
 const Layout = ({ children }) => {
-  const {title, description} = useSiteMetadata();
+  const { title, description } = useSiteMetadata();
   return (
-  <>
-    <Global
-      styles={css`
+    <>
+      <Global
+        styles={css`
         * {
           box-sizing: border-box;
           margin: 0;
@@ -25,7 +26,7 @@ const Layout = ({ children }) => {
         }
         html,
         body {
-          background: fuchsia;
+          background: #bbb;
           margin: 0;
           color: #222;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -39,6 +40,7 @@ const Layout = ({ children }) => {
             margin-top: 0;
           }
         }
+        
 
         h1,
         h2,
@@ -52,34 +54,26 @@ const Layout = ({ children }) => {
             margin-top: 0.5rem;
           }
         }
-
-        strong {
-          color: fuchsia;
-        }
-
-        li {
-          margin-top: 0.25rem;
-        }
       `}
-    />
-    <Helmet>
-      <html lang="en"/>
-      <title>{title}</title>
-      <meta name={title} description={description}/>
-      </Helmet> 
-    <Header />
-    <main
-      css={css`
+      />
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name={title} description={description} />
+      </Helmet>
+      <Header />
+      <main
+        css={css`
         width: 100vw;
         margin-top: 8vh;
         background: #ecdbc5;
       `}
-    >
-      {children}
-    </main>
-    <Footer/>
-  </>
-);
+      >
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default Layout;
