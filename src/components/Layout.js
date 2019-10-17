@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';/*Here is where we set our SEO */
 import Header from './Header';
 import Footer from './Footer';
 
-
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
