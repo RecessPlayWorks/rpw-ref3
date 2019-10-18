@@ -4,7 +4,7 @@ import NavLink from './NavLink';
 
 const StyledBurgerMenu = styled('div')`
 
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 319px) {
     display: block;
     position: fixed;
     top: 0;
@@ -115,7 +115,6 @@ const StyledBurgerMenu = styled('div')`
         color: #fff;
         font-size: 1.5rem;
         padding: 1rem;
-        
         & a {
             color: #fff;
             font-size: 12vw;

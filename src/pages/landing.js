@@ -20,11 +20,7 @@ const StyledLanding = styled.div`
     flex-wrap: wrap;
     position: relative;
    }
-   .cell {
-    width: 600px;
-    height: 500px;
-    flex-grow: 1;
-   }
+   
    img {
     width: 100%;
     height: 100%;
@@ -43,15 +39,14 @@ const StyledLanding = styled.div`
             text-align: center;
             font-size: 1.2rem;
         }
-        & h3 {
+        & p {
+            color: #fff;
             text-align: left;
             line-height: 2;
             font-size: 0.9rem;
         }
    }
    .logo-container {
-        width: 10vw;
-        // height: 320px;
         margin: 0 auto 2vh auto;
    }
    button {
@@ -61,7 +56,57 @@ const StyledLanding = styled.div`
        background-color: orange;
    }
 
+   @media only screen and (min-width: 319px) {
+    .cell {
+        width: 500px;
+        height: 300px;
+        flex-grow: 1;
+       }
+    section.landing-content-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -40vw;
+        width: 80vw;
+        & .logo-container {
+            width: 60vw;
+            margin: 0 auto 2vh auto;
+       }
+        & .landing-text-container {
+            & p {
+                line-height: 1.5;
+                font-size: 0.9rem;
+                margin: 2vh auto;
+            }
+        }
+     }
+   }
 
+  @media only screen and (min-width: 610px) {
+    .cell {
+        width: 600px;
+        height: 500px;
+        flex-grow: 1;
+       }
+    section.landing-content-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -40vw;
+        width: 80vw;
+        & .logo-container {
+            width: 15vw;
+            margin: 4vh auto;
+            img {
+                height: 100%;
+            }
+       }
+        & .landing-text-container {
+            opacity: 1;
+        }
+     }
+   }
+  }
 `;
 
 const Landing = () => (
@@ -85,11 +130,11 @@ const Landing = () => (
                 </div>
                 <div className="landing-text-container">
                     <h2>It's time for Recess!</h2>
-                    <h3>Recess Playworks is going to be a unique place for modern families managing the work-life balance.</h3>
-                    <h3>For the adults we will have a chic lounge, meeting rooms, a podcast room and phone rooms.</h3>
-                    <h3>For the kids we will have classes including STEM, coding, chess, an all day art studio and a supervised free play zone.</h3>
-                    <h3>Life gets busy and everyone needs a recess</h3>
-                    <h3>Come join our growing list of people who want to be the first to know all the details!</h3>
+                    <p>Recess Playworks is going to be a unique place for modern families managing the work-life balance.</p>
+                    <p>For the adults we will have a chic lounge, meeting rooms, a podcast room and phone rooms.</p>
+                    <p>For the kids we will have classes including STEM, coding, chess, an all day art studio and a supervised free play zone.</p>
+                    <p>Life gets busy and everyone needs a recess</p>
+                    <p>Come join our growing list of people who want to be the first to know all the details!</p>
 
                     <button>
                         <NavLink to="/contact/" className="cta-join">

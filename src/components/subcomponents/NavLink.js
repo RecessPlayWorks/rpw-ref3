@@ -18,6 +18,11 @@ const StyledNavLink = styled(Link)`
   &:last-of-type {
     margin-right: 0;
   }
+  @media only screen and (min-width: 319px) {
+    // .home-link {
+      font-weight: bold;
+  //  }
+  }
 `;
 
 const NavLink = ({ to, activeClassName, textContent }) => (

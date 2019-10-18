@@ -59,10 +59,36 @@ nav.nav-menu ul {
     background: hsl(0, 0%, 25%);
   }
 
-  
-  @media only screen and (min-width: 360px) {
+  /* Phones */
+  @media only screen and (min-width: 319px) {
     .nav-menu {
         display: none;
     }
-  
+    ul li  {
+      height: 100%;
+      margin-left: 5vw;
+      text-align: center;
+      display: flex;
+    }
+    .home-link ul li a {
+      font-size: 1rem;
+        margin:  auto;     
+    }
+    
+  }
+  @media only screen and (min-width: 610px) {
+
+    .nav-menu {
+      display: block;
+    }
+
+    .nav-menu ul li a{
+      font-weight: 400;
+    }
+    
+  }
+
+  .test {
+    color: #6c8a6c;
+    
   }

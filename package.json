@@ -1,5 +1,5 @@
 {
-  "name": "frontendmasters-gatsby",
+  "name": "recessplayworks-gatsby",
   "private": true,
   "description": "Bare-bones starter for the Gatsby Frontend Masters workshop.",
   "version": "0.1.0",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlengstorf/frontendmasters-gatsby"
+    "url": "https://github.com:RecessPlayWorks/rpw-ref3"
   },
   "eslintIgnore": [
     ".scrap/scrap.js"

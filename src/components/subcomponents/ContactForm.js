@@ -1,5 +1,59 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
+import styled from '@emotion/styled';
+
+const StyledContactContainer = styled.section`
+  margin: 2vh auto;
+  width: 90vw;
+  height: 88vh;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif;
+  padding-top: 2%;
+  h1 {
+    color: #000;
+    margin: 2vh auto 0;
+    font-weight: 100;
+  }
+  form {
+    width: 100%;
+    margin: -2vh auto;
+  }
+  form input[type=text], input[type=email], textarea {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+  p {
+    text-align: left;
+    width: 90vw;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input, textarea {
+    display: block;
+    width: 90vw;
+    height: 8vh;
+  }
+ input {
+    //  height: 5vh;
+ }
+ textarea {
+    height: 20vh;
+ }
+ p:last-of-type {
+   text-align: center;
+ }
+ button {
+    width: 40vw;
+    height: 8vh;
+    // margin: auto;
+    background: #6c8a6c;
+    color: #fff;
+    font-size: 0.8rem;
+ }
+`;
+
 
 function encode(data) {
   return Object.keys(data)
@@ -7,7 +61,8 @@ function encode(data) {
     .join('&')
 }
 
-export default function Contact() {
+// export default function Contact() {
+  const ContactForm = () => {
   const [state, setState] = React.useState({})
 
   const handleChange = (e) => {
@@ -30,8 +85,8 @@ export default function Contact() {
   }
 
   return (
-    <div>
-      <h1>Contact</h1>
+    <StyledContactContainer className="contact-container">
+      <h1>Contact Us</h1>
       <form
         name="contact"
         method="post"
@@ -49,22 +104,19 @@ export default function Contact() {
         </p>
         <p>
           <label>
-            Your name:
-            <br />
+            name:
             <input type="text" name="name" onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Your email:
-            <br />
+            email:
             <input type="email" name="email" onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Message:
-            <br />
+            message:
             <textarea name="message" onChange={handleChange} />
           </label>
         </p>
@@ -72,6 +124,9 @@ export default function Contact() {
           <button type="submit">Send</button>
         </p>
       </form>
-    </div>
+    </StyledContactContainer>
+
   )
 }
+
+export default ContactForm;
