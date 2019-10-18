@@ -4,7 +4,6 @@ import Landing from './landing'
 import Layout from '../components/Layout';
 // import PostPreview from '../components/PostPreview';
 
-
 export default () => {
     // const posts = usePosts()
     return (

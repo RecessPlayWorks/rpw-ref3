@@ -35,6 +35,7 @@ const StyledLanding = styled.div`
    .landing-text-container {
         background: rgba(110, 66, 193, 0.9);
         padding: 1vh 2vw;
+        position: relatve;
         & h2 {
             text-align: center;
             font-size: 1.2rem;
@@ -78,6 +79,11 @@ const StyledLanding = styled.div`
                 font-size: 0.9rem;
                 margin: 2vh auto;
             }
+            & button {
+                width: 30vw;
+                margin-left: 10vw;
+                left: 50%;
+            }
         }
      }
    }
@@ -101,9 +107,12 @@ const StyledLanding = styled.div`
                 height: 100%;
             }
        }
-        & .landing-text-container {
-            opacity: 1;
-        }
+       & .landing-text-container {
+           button {
+               width: 12vw;
+               margin: 2vh auto;
+           }
+       }
      }
    }
   }
