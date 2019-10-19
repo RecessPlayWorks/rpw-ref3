@@ -5,6 +5,8 @@ import gramIcon from '../img/gram-icon.png'
 
 const StyledFooter = styled('footer')`
   width: 100vw;
+  margin-top: -2vh;
+  background: lightcoral;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.8);
@@ -16,13 +18,12 @@ p {
 }
 
 @media only screen and (min-width: 319px) {
-  opacity: 1;
   height: auto;
-  background: peachpuff;
   section {
-    margin: 2%;
+    margin: 3vh auto 3vh 3vw;
     p {
       font-size: 0.8rem;
+      line-height: 1.2;
     }
   }
   .social-icons {
@@ -36,9 +37,7 @@ p {
     }
   }
 @media only screen and (min-width: 610px) {
-  opacity: 1;
-  // height: 16vh;
-  background: lightcoral;
+
   .social-icons {
     height: 100%;
     margin: 5vh 0;
@@ -60,9 +59,12 @@ const Footer = () => (
           <p>203-244-5928</p>
         </section>
         <div className="social-icons">
-        <img src={fbIcon} alt="facebook icon" />
+        <a href = "https://www.instagram.com/recessridgefield/" target="_blank" rel="noopener noreferrer"> 
         <img src={gramIcon} alt="instagram icon" />
-
+      </a>
+      <a href = "https://www.facebook.com/recessct/?ref=br_rs" target="_blank" rel="noopener noreferrer"> 
+        <img src={fbIcon} alt="facebook icon" />
+      </a>
         </div>
   </StyledFooter>
 );

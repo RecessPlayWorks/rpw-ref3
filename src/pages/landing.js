@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
+
+import NavLink from '../components/subcomponents/NavLink'
 /* images imports */
 import landingLogo from '../img/rpw-landing-icon.jpg';
 import boy from '../img/boy.jpg';
 import women from '../img/women.jpg';
 import painting from '../img/painting.jpg';
 import meeting from '../img/meeting.jpg';
+// import NavLink from './subcomponents/NavLink';
 
-const NavLink = styled(Link)`
-  color: #fff;
-  font-size: 0.8rem;
-`;
+
+// const NavLink = styled(Link)`
+//   color: #fff;
+//   font-size: 0.8rem;
+// `;
 
 const StyledLanding = styled.div`
   .flex-container {
@@ -36,6 +39,7 @@ const StyledLanding = styled.div`
         background: rgba(110, 66, 193, 0.9);
         padding: 1vh 2vw;
         position: relatve;
+
         & h2 {
             text-align: center;
             font-size: 1.2rem;
@@ -43,7 +47,7 @@ const StyledLanding = styled.div`
         & p {
             color: #fff;
             text-align: left;
-            line-height: 2;
+            line-height: 1.5;
             font-size: 0.9rem;
         }
    }
@@ -55,6 +59,10 @@ const StyledLanding = styled.div`
        height: 5vh;
        border: 2px solid blue;
        background-color: orange;
+       a {
+           color: #fff;
+           font-weight: 400;
+       }
    }
 
    @media only screen and (min-width: 319px) {
@@ -75,7 +83,7 @@ const StyledLanding = styled.div`
        }
         & .landing-text-container {
             & p {
-                line-height: 1.5;
+                line-height: 1.2;
                 font-size: 0.9rem;
                 margin: 2vh auto;
             }
@@ -146,9 +154,7 @@ const Landing = () => (
                     <p>Come join our growing list of people who want to be the first to know all the details!</p>
 
                     <button>
-                        <NavLink to="/contact/" className="cta-join">
-                            Join Up!
-                        </NavLink>
+                        <NavLink to="/contact/" className="cta-join" activeClassName="" textContent="Join Up!" />
                     </button>
                 </div>
             </section>

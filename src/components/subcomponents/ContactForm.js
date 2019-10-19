@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 const StyledContactContainer = styled.section`
   margin: 2vh auto;
   width: 90vw;
-  height: 88vh;
+  height: 92vh;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   Helvetica, Arial, sans-serif;
@@ -20,8 +20,8 @@ const StyledContactContainer = styled.section`
     margin: -2vh auto;
   }
   form input[type=text], input[type=email], textarea {
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.1rem;
+    font-weight: 100;
   }
   p {
     text-align: left;
@@ -117,7 +117,7 @@ function encode(data) {
         <p>
           <label>
             message:
-            <textarea name="message" onChange={handleChange} />
+            <textarea type="text" name="message" onChange={handleChange} />
           </label>
         </p>
         <p>
