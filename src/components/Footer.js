@@ -38,32 +38,32 @@ const StyledFooter = styled('footer')`
 /* iPhone SE to iPad */
 @media (min-width: 310px) and (max-width: 767px) {
   
-  footer {
-    section p {
-      font-size: 60%;
-      color: red;
-    }
-  }
-  .social-icons {
+  // footer {
+  //   section p {
+  //     font-size: 60%;
+  //     color: red;
+  //   }
+  // }
+  // .social-icons {
     
-    a {
-      margin: 0 2vw;
-      width: 16vw;
-      img{
-        width: 100%;
-      }
-    }
-  }
+  //   a {
+  //     margin: 0 2vw;
+  //     width: 16vw;
+  //     img{
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 
 }
 
 /* iPad and larger */
-@media (min-width: 768px) { 
-    section p {
-      font-size: 110%;
-      line-height: 1.3;
-  }
-}
+// @media (min-width: 768px) { 
+//     section p {
+//       font-size: 110%;
+//       line-height: 1.3;
+//   }
+// }
 `;
 
 const Footer = () => (
