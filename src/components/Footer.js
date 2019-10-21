@@ -7,28 +7,34 @@ const StyledFooter = styled('footer')`
   width: 100vw;
   box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.8);
 
-
   grid-row: 3;
   grid-column: 1;
   background: lightsalmon;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   padding: 1%;
   font-size: 1.1rem;
   height: 18vh;
-  flex-direction: column;
-  justify-content: center;
+  // flex-direction: column;
+  // justify-content: center;
   position: relative;
     section {
+      // border: 2px dashed #fff;
       min-width: 50%;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       margin-left: 4%;
     }
-
-
+    .social-icons {
+      grid-column: 2;
+      display: flex;
+      flex: flex-end;
+      align-items: center;
+      justify-content: center;  
+      // border: 2px dashed #000;
+    }
 
 /* iPhone SE to iPad */
 @media (min-width: 310px) and (max-width: 767px) {
@@ -39,13 +45,9 @@ const StyledFooter = styled('footer')`
     }
   }
   .social-icons {
-    grid-column: 3;
-    display: flex;
-    flex: flex-end;
-    align-items: center;
-    justify-content: center;
+    
     a {
-      margin: 0 2vh;
+      margin: 0 2vw;
       width: 16vw;
       img{
         width: 100%;

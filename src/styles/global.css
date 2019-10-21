@@ -149,9 +149,9 @@ nav.nav-menu ul {
 
 /* iPhone SE to iPad */
 @media (min-width: 310px) and (max-width: 767px) {
-  header::after {
+  /* header::after {
     content: "iPhoneSE to Ipad";
-  }
+  } */
   section.landing-content-container {
     width: 90vw;
   }
@@ -176,9 +176,9 @@ nav.nav-menu ul {
 
 /* iPad and larger */
 @media (min-width: 768px) {
-  header::after {
+  /* header::after {
     content: "iPad & Larger";
-  }
+  } */
   section.landing-content-container {
     width: 60vw;
   }
