@@ -5,66 +5,80 @@ import gramIcon from '../img/gram-icon.png'
 
 const StyledFooter = styled('footer')`
   width: 100vw;
-  margin-top: -2vh;
-  background: lightcoral;
-  display: flex;
-  justify-content: space-between;
   box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.8);
-  .address {
-    color: #fff;
+
+
+  grid-row: 3;
+  grid-column: 1;
+  background: lightsalmon;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding: 1%;
+  font-size: 1.1rem;
+  height: 18vh;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+    section {
+      min-width: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 4%;
+    }
+
+
+
+/* iPhone SE to iPad */
+@media (min-width: 310px) and (max-width: 767px) {
+  
+  footer {
+    section p {
+      font-size: 70%;
+    }
   }
-p {
-  font-size: 1.3rem;
+  .social-icons {
+    grid-column: 3;
+    display: flex;
+    flex: flex-end;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: 0 2vh;
+      width: 16vw;
+      img{
+        width: 100%;
+      }
+    }
+  }
+
 }
 
-@media only screen and (min-width: 319px) {
-  height: auto;
-  section {
-    margin: 3vh auto 3vh 3vw;
-    p {
-      font-size: 0.8rem;
-      line-height: 1.2;
-    }
+/* iPad and larger */
+@media (min-width: 768px) { 
+    section p {
+      font-size: 110%;
+      line-height: 1.3;
   }
-  .social-icons {
-    height: 100%;
-    margin: auto 0;
-    margin-right: 2vw;
-      img {
-        width: 15vw;
-        margin: 1vh 2vw;
-      }
-    }
-  }
-@media only screen and (min-width: 610px) {
-
-  .social-icons {
-    height: 100%;
-    margin: 5vh 0;
-    margin-right: 2vw;
-      img {
-        width: 4vw;
-        margin: 1vh 0.5vw;
-      }
-    }  
 }
 `;
 
 const Footer = () => (
   <StyledFooter>
-        <section className="address">
-          <p>Recess PlayWorks</p>
-          <p>66 Danbury Road</p>
-          <p>Ridgefield, CT 06877</p>
-          <p>203-244-5928</p>
-        </section>
+    <section className="address">
+      <p>Recess PlayWorks</p>
+      <p>66 Danbury Road</p>
+      <p>Ridgefield, CT 06877</p>
+      <p>203-244-5928</p>
+    </section>
         <div className="social-icons">
-        <a href = "https://www.instagram.com/recessridgefield/" target="_blank" rel="noopener noreferrer"> 
-        <img src={gramIcon} alt="instagram icon" />
-      </a>
-      <a href = "https://www.facebook.com/recessct/?ref=br_rs" target="_blank" rel="noopener noreferrer"> 
-        <img src={fbIcon} alt="facebook icon" />
-      </a>
+          <a href = "https://www.instagram.com/recessridgefield/" target="_blank" rel="noopener noreferrer"> 
+            <img src={gramIcon} alt="instagram icon" />
+          </a>
+          <a href = "https://www.facebook.com/recessct/?ref=br_rs" target="_blank" rel="noopener noreferrer"> 
+            <img src={fbIcon} alt="facebook icon" />
+          </a>
         </div>
   </StyledFooter>
 );

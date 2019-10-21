@@ -61,16 +61,12 @@ const Layout = ({ children }) => {
         <meta name={title} description={description} />
       </Helmet>
       <Header />
-      <main
-        css={css`
-        width: 100vw;
-        margin-top: 8vh;
-        background: #ecdbc5;
-      `}
-      >
+      <div className="layout-grid">
+      <main>
         {children}
       </main>
       <Footer />
+      </div>
     </>
   );
 }

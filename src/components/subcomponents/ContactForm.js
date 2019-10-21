@@ -2,24 +2,11 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import styled from '@emotion/styled';
 
-const StyledContactContainer = styled.section`
-  margin: 2vh auto;
+const StyledContactForm = styled.form`
   width: 90vw;
-  height: 92vh;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Helvetica, Arial, sans-serif;
-  padding-top: 2%;
-  h1 {
-    color: #000;
-    margin: 2vh auto 0;
-    font-weight: 100;
-  }
-  form {
-    width: 100%;
-    margin: -2vh auto;
-  }
-  form input[type=text], input[type=email], textarea {
+  margin: 2vh auto;
+  
+  & input[type=text], input[type=email], textarea {
     font-size: 1.1rem;
     font-weight: 100;
   }
@@ -85,9 +72,7 @@ function encode(data) {
   }
 
   return (
-    <StyledContactContainer className="contact-container">
-      <h1>Contact Us</h1>
-      <form
+      <StyledContactForm
         name="contact"
         method="post"
         action="/thanks/"
@@ -123,9 +108,7 @@ function encode(data) {
         <p>
           <button type="submit">Send</button>
         </p>
-      </form>
-    </StyledContactContainer>
-
+      </StyledContactForm>
   )
 }
 

@@ -4,6 +4,42 @@
     --menu-speed: 0.5s;
 }
  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  background: #bbb;
+  margin: 0;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-size: 1.6rem;
+  line-height: 1.4;
+
+  /* remove margin for the main div that Gatsby mounts into */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  line-height: 1.1;
+  /* + * {
+    margin-top: 0.5rem;
+  } */
+}
  
  /* Base styles that apply to all menus */
  header.menu-header {
@@ -92,3 +128,64 @@ nav.nav-menu ul {
     color: #6c8a6c;
     
   }
+
+  /* RESPONSIVE UPDATES SUNDAY */
+
+  .layout-grid {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh minmax(80vh, 1fr) auto;
+  }
+  main {
+    width: 100vw;
+    background: lightseagreen;
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    min-height: 70vh;
+  }
+
+
+/* iPhone SE to iPad */
+@media (min-width: 310px) and (max-width: 767px) {
+  header::after {
+    content: "iPhoneSE to Ipad";
+  }
+  section.landing-content-container {
+    width: 90vw;
+  }
+   
+    h2 {
+      font-size: 1.5rem;
+    }
+    section.landing-content-container .logo-container {
+      margin: 2vh auto;
+      width: 80vw;
+    } 
+    .logo-container img {
+      width: 100%;
+    }
+  section.landing-content-container .landing-text-container p {
+    font-size: 0.8rem;
+  }
+  footer section p {
+    font-size: 70%;
+  }
+}
+
+/* iPad and larger */
+@media (min-width: 768px) {
+  header::after {
+    content: "iPad & Larger";
+  }
+  section.landing-content-container {
+    width: 60vw;
+  }
+  footer section p {
+      font-size: 110%;
+      line-height: 1.3;
+    
+  }
+}
+
