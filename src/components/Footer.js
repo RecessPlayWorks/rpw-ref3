@@ -16,11 +16,8 @@ const StyledFooter = styled('footer')`
   padding: 1%;
   font-size: 1rem;
   height: 18vh;
-  // flex-direction: column;
-  // justify-content: center;
   position: relative;
     section {
-      // border: 2px dashed #fff;
       min-width: 50%;
       position: absolute;
       top: 50%;
@@ -31,39 +28,9 @@ const StyledFooter = styled('footer')`
       display: flex;
       flex: flex-end;
       align-items: center;
-      justify-content: center;  
-      // border: 2px dashed #000;
+      justify-content: center;
     }
 
-/* iPhone SE to iPad */
-@media (min-width: 310px) and (max-width: 767px) {
-  
-  // footer {
-  //   section p {
-  //     font-size: 60%;
-  //     color: red;
-  //   }
-  // }
-  // .social-icons {
-    
-  //   a {
-  //     margin: 0 2vw;
-  //     width: 16vw;
-  //     img{
-  //       width: 100%;
-  //     }
-  //   }
-  // }
-
-}
-
-/* iPad and larger */
-// @media (min-width: 768px) { 
-//     section p {
-//       font-size: 110%;
-//       line-height: 1.3;
-//   }
-// }
 `;
 
 const Footer = () => (
