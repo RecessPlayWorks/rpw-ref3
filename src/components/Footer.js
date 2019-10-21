@@ -14,7 +14,7 @@ const StyledFooter = styled('footer')`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   padding: 1%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   height: 18vh;
   // flex-direction: column;
   // justify-content: center;
@@ -25,7 +25,6 @@ const StyledFooter = styled('footer')`
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-left: 4%;
     }
     .social-icons {
       grid-column: 2;
@@ -41,7 +40,8 @@ const StyledFooter = styled('footer')`
   
   footer {
     section p {
-      font-size: 70%;
+      font-size: 60%;
+      color: red;
     }
   }
   .social-icons {

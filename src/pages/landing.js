@@ -37,8 +37,11 @@ const StyledLanding = styled.section`
         height: 7vh;
         background-color: orange;
         margin: 3vh auto;
-        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         a {
+            font-size: 1.2rem;
             color: #fff;
             font-weight: 400;
         }
