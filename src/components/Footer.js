@@ -29,6 +29,9 @@ const StyledFooter = styled('footer')`
       flex: flex-end;
       align-items: center;
       justify-content: center;
+      a {
+        margin: 2%;
+      }
     }
 
 `;

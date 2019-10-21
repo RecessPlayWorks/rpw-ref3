@@ -32,9 +32,9 @@ const StyledLanding = styled.section`
     }
 
     button {
-        width: 12vw;
-        min-width: 250px;
-        height: 7vh;
+        width: 10vw;
+        min-width: 220px;
+        height: 8vh;
         background-color: orange;
         margin: 3vh auto;
         display: flex;
